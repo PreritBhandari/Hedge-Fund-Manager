@@ -1,12 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import settings from "@salesforce/design-system-react/components/settings";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import App from "./App";
 
+import "./styles.css";
+//import "@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.css";
+
+function AppContainer() {
+  return (
+    <div className="App">
+      <App />
+    </div>
+  );
+}
+
+settings.setAppElement("#root");
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<AppContainer />, rootElement);

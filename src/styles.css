@@ -1,0 +1,14 @@
+@import url("https://unpkg.com/@salesforce-ux/design-system/assets/styles/salesforce-lightning-design-system.min.css");
+
+.slds-truncate {
+  overflow: visible;
+}
+
+.slds-global-header_container {
+  position: relative !important;
+}
+
+.slds-global-header {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
