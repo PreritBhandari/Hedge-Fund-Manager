@@ -12,3 +12,7 @@
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
 }
+
+.slds-page-header{
+    margin: 15px 10px 10px 10px;
+}

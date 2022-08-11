@@ -58,12 +58,20 @@ export default function CustomNav() {
                     <GlobalNavigationBarDropdown
                         assistiveText={{ icon: 'Open menu item submenu' }}
                         id="primaryDropdown"
-                        label="Menu Item"
+                        label="Defi"
                         options={dropdownCollection}
                     />
-                    <GlobalNavigationBarLink label="Menu Item" />
-                    <GlobalNavigationBarLink label="Menu Item" />
-                    <GlobalNavigationBarLink label="Menu Item" />
+                    <GlobalNavigationBarDropdown
+                        assistiveText={{ icon: 'Open menu item submenu' }}
+                        id="primaryDropdown"
+                        label="Exchanges"
+                        options={dropdownCollection}
+                    />                    
+                    <GlobalNavigationBarLink label="Dashboards" />
+                    <GlobalNavigationBarLink label="Assets" />
+                    <GlobalNavigationBarLink label="Reports" />
+                    <GlobalNavigationBarLink label="Snapshots" />
+                    <GlobalNavigationBarLink label="Clients" />
                 </GlobalNavigationBarRegion>
             </GlobalNavigationBar>
         </IconSettings>)
