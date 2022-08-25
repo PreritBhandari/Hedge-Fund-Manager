@@ -17,8 +17,9 @@ const columns = [
     <DataTableColumn
         key="balance"
         label="balance"
-        property="usdc"
+        property="usdcFtm"
     />,
+
 
     <DataTableColumn key="token" label="token" property="token" />,
 
@@ -46,7 +47,7 @@ export default function Expandable({ name }) {
                     title={name}
                 >
                     <p>
-                        <div style={{ width: "123vh" }}>
+                        <div style={{ width: "118vh" }}>
                             <DataTable
                                 items={protocolData}
                                 id="DataTableExample-headless"

@@ -49,34 +49,34 @@ class Account extends React.Component {
             {
                 label: 'Total Balance',
                 content:
-                    '$2,325,453.34',
+                    <strong>$2,325,453.34</strong>,
                 truncate: true,
             },
-            { label: 'Staked Balance', content: '$2,325,453.34', },
+            { label: 'Staked Balance', content: <strong>$2,325,453.34</strong>, },
             {
                 label: 'Liquid Balance',
-                content: '$2,325,453.34',
+                content: <strong>$2,325,453.34</strong>,
             },
             {
                 label: 'Total Balance',
-                content: '$2,325,453.34',
+                content: <strong>$2,325,453.34</strong>,
                 truncate: true,
             },
             {
                 label: '24 Hour Change',
-                content: '$2,325,453.34',
+                content: <strong className='greenBold'>+2,325,453 (2.4%)</strong>,
                 truncate: true,
             }, {
                 label: 'Week Change',
-                content: '$2,325,453.34',
+                content: <strong className='greenBold'>+2,325,453.34 (2.4%)</strong>,
                 truncate: true,
             }, {
                 label: 'Month Change',
-                content: '$2,325,453.34',
+                content: <strong className='redBold'>-2,325,453.34 (2.4%)</strong>,
                 truncate: true,
             }, {
                 label: 'YTD Change',
-                content: '$2,325,453.34',
+                content: <strong className='greenBold'>+2,325,453.34 (2.4%)</strong>,
                 truncate: true,
             },
         ];

@@ -18,6 +18,16 @@
   margin-bottom: 15px;
 }
 
+.slds-page-header__detail-row {
+  background-color: white !important;
+  overflow: scroll;
+}
+
+/* .slds-context-bar {
+  scrollbar-width: none;
+  overflow: visible;
+} */
+
 .homepage {
   padding: 10px;
 }
@@ -58,6 +68,7 @@
 
 .slds-table_header-hidden td div {
   font-weight: bold !important;
+  /* width: 205px; */
 }
 
 .slds-table_header-fixed_scroller {
@@ -120,4 +131,44 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.slds-input {
+  text-align: center !important;
+  padding: 0 210px 0 210px !important;
+}
+
+.slds-input::placeholder {
+  color: #135a99 !important;
+}
+
+.slds-input__icon {
+  right: 21rem !important;
+  fill: #1e6bae !important;
+}
+
+.slds-context-bar__item .slds-dropdown {
+  left: 0% !important;
+  min-width: 15rem !important;
+}
+
+.slds-brand-band {
+  background: url("./assets/images/banner-brand-default.png");
+  background-position: center;
+  background-size: auto;
+  height: 100vh;
+}
+
+.greenBold {
+  color: green;
+}
+
+.redBold {
+  color: red;
+}
+
+@media screen and (max-width: 986px) {
+  .slds-global-header {
+    display: none !important;
+  }
 }

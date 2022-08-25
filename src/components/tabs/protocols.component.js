@@ -3,6 +3,7 @@ import { DataTable, DataTableCell, DataTableColumn, ExpandableSection, IconSetti
 import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
 import Expandable from './expandable.component';
 import SimpleBarChart from '../charts/simplebar.component';
+import TombToken from '../tokens/tombToken';
 
 
 const protocolData = require("../../dummyDatas/index.json")
@@ -10,16 +11,16 @@ const protocolData = require("../../dummyDatas/index.json")
 class Protocols extends React.Component {
 
     state = {
-        sortColumn: 'opportunityName',
+        sortColumn: 'protocolName',
         sortColumnDirection: {
-            opportunityName: 'asc',
+            protocolName: 'asc',
         },
         items: [
             {
                 id: '0',
                 protocolName: <Expandable name="Aave" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '09/16/2020 23:43:23',
             },
@@ -28,7 +29,7 @@ class Protocols extends React.Component {
                 id: '1',
                 protocolName: <Expandable name="Balancer" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '10/16/2020 23:43:23',
             },
@@ -37,7 +38,7 @@ class Protocols extends React.Component {
                 id: '2',
                 protocolName: <Expandable name="Balancer" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '10/16/2020 23:43:23',
             },
@@ -45,7 +46,7 @@ class Protocols extends React.Component {
                 id: '3',
                 protocolName: <Expandable name="Tomb" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '10/16/2020 23:43:23',
             },
@@ -53,7 +54,7 @@ class Protocols extends React.Component {
                 id: '4',
                 protocolName: <Expandable name="Tomb" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '10/16/2020 23:43:23',
             },
@@ -61,7 +62,7 @@ class Protocols extends React.Component {
                 id: '5',
                 protocolName: <Expandable name="Tomb" />,
                 balance: '$ 1,254,345.34',
-                tokens: 'Acme',
+                tokens: <TombToken />,
                 rewards: '$ 4,345.34',
                 lastTransactionDate: '10/16/2020 23:43:23',
             },
@@ -149,23 +150,21 @@ class Protocols extends React.Component {
                             selectRows="checkbox"
                         >
                             <DataTableColumn
-                                isSorted={this.state.sortColumn === 'opportunityName'}
                                 label="Protocol"
                                 property='protocolName'
                                 primaryColumn
-                                sortable
-                                sortDirection={this.state.sortColumnDirection.opportunityName}
+
                             >
                             </DataTableColumn>
                             <DataTableColumn label="Balance" property="balance" />
-                            <DataTableColumn label="Tokens" property="token" />
+                            <DataTableColumn label="Tokens" property="tokens" />
                             <DataTableColumn label="Rewards" property="rewards" />
                             <DataTableColumn
-                                isSorted={this.state.sortColumn === 'opportunityName'}
+                                isSorted={this.state.sortColumn === 'protocolName'}
                                 label="Last Transaction Date"
                                 property="lastTransactionDate"
                                 sortable
-                                sortDirection={this.state.sortColumnDirection.confidence}
+                                sortDirection={this.state.sortColumnDirection.protocolName}
                             />
                         </DataTable>
                     </IconSettings>
