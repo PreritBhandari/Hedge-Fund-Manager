@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <div className='homepage'>
       <Account />
-      <CustomTab />
+      <CustomTab page="homepage"/>
     </div>
   )
 }

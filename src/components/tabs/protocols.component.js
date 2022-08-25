@@ -2,6 +2,7 @@ import React from 'react';
 import { DataTable, DataTableCell, DataTableColumn, ExpandableSection, IconSettings } from '@salesforce/design-system-react';
 import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
 import Expandable from './expandable.component';
+import SimpleBarChart from '../charts/simplebar.component';
 
 
 const protocolData = require("../../dummyDatas/index.json")
@@ -118,51 +119,65 @@ class Protocols extends React.Component {
         return (
             <div
                 style={{
-                    height: 'auto',
-                    width: "65%",
+                    width: "100%",
+                    display: "flex"
                 }}
             >
-                <IconSettings utilitySprite={standardSprite}>
-                    <DataTable
-                        assistiveText={{
-                            actionsHeader: 'actions',
-                            columnSort: 'sort this column',
-                            columnSortedAscending: 'asc',
-                            columnSortedDescending: 'desc',
-                            selectAllRows: 'Select all rows',
-                            selectRow: 'Select this row',
-                        }}
-                        fixedHeader
-                        fixedLayout
-                        keyboardNavigation
-                        items={this.state.items}
-                        id="DataTableExample-FixedHeaders"
-                        onRowChange={this.handleChanged}
-                        onSort={this.handleSort}
-                        selection={this.state.selection}
-                        selectRows="checkbox"
-                    >
-                        <DataTableColumn
-                            isSorted={this.state.sortColumn === 'opportunityName'}
-                            label="Protocol"
-                            property='protocolName'
-                            primaryColumn
-                            sortable
-                            sortDirection={this.state.sortColumnDirection.opportunityName}
+                <div style={{
+                    width: "65%",
+                    height: "auto"
+                }}>
+
+                    <IconSettings utilitySprite={standardSprite}>
+                        <DataTable
+                            assistiveText={{
+                                actionsHeader: 'actions',
+                                columnSort: 'sort this column',
+                                columnSortedAscending: 'asc',
+                                columnSortedDescending: 'desc',
+                                selectAllRows: 'Select all rows',
+                                selectRow: 'Select this row',
+                            }}
+                            fixedHeader
+                            fixedLayout
+                            keyboardNavigation
+                            items={this.state.items}
+                            id="DataTableExample-FixedHeaders"
+                            onRowChange={this.handleChanged}
+                            onSort={this.handleSort}
+                            selection={this.state.selection}
+                            selectRows="checkbox"
                         >
-                        </DataTableColumn>
-                        <DataTableColumn label="Balance" property="balance" />
-                        <DataTableColumn label="Tokens" property="token" />
-                        <DataTableColumn label="Rewards" property="rewards" />
-                        <DataTableColumn
-                            isSorted={this.state.sortColumn === 'opportunityName'}
-                            label="Last Transaction Date"
-                            property="lastTransactionDate"
-                            sortable
-                            sortDirection={this.state.sortColumnDirection.confidence}
-                        />
-                    </DataTable>
-                </IconSettings>
+                            <DataTableColumn
+                                isSorted={this.state.sortColumn === 'opportunityName'}
+                                label="Protocol"
+                                property='protocolName'
+                                primaryColumn
+                                sortable
+                                sortDirection={this.state.sortColumnDirection.opportunityName}
+                            >
+                            </DataTableColumn>
+                            <DataTableColumn label="Balance" property="balance" />
+                            <DataTableColumn label="Tokens" property="token" />
+                            <DataTableColumn label="Rewards" property="rewards" />
+                            <DataTableColumn
+                                isSorted={this.state.sortColumn === 'opportunityName'}
+                                label="Last Transaction Date"
+                                property="lastTransactionDate"
+                                sortable
+                                sortDirection={this.state.sortColumnDirection.confidence}
+                            />
+                        </DataTable>
+                    </IconSettings>
+                </div>
+                <div style={{
+                    width: "35%",
+                    marginLeft: 20,
+                    padding: 10,
+                }}>
+                    <SimpleBarChart />
+                </div>
+
             </div>
         );
     }

@@ -83,3 +83,12 @@
 .slds-table tbody th {
   padding-top: 0 !important;
 }
+
+.recharts-cartesian-grid-vertical {
+  display: none !important;
+}
+
+.barLabel{
+  text-align: center;
+}
+

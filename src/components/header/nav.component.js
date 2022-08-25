@@ -78,22 +78,43 @@ export default function CustomNav() {
 
 const dropdownCollection = [
     {
-        label: 'Menu Item One',
+        label: 'Overview',
         value: '1',
         iconCategory: 'utility',
         iconName: 'table',
         href: 'http://www.google.com',
     },
     {
-        label: 'Menu Item Two',
+        label: 'Transactions',
         value: '2',
         iconCategory: 'utility',
         iconName: 'kanban',
         href: 'http://www.google.com',
     },
     {
-        label: 'Menu Item Three',
+        label: 'Spot Balances',
         value: '3',
+        iconCategory: 'utility',
+        iconName: 'side_list',
+        href: 'http://www.google.com',
+    },
+    {
+        label: 'Future Balances',
+        value: '4',
+        iconCategory: 'utility',
+        iconName: 'side_list',
+        href: 'http://www.google.com',
+    },
+    {
+        label: 'Exchanges',
+        value: '5',
+        iconCategory: 'utility',
+        iconName: 'side_list',
+        href: 'http://www.google.com',
+    },
+    {
+        label: 'Add Exchange',
+        value: '6',
         iconCategory: 'utility',
         iconName: 'side_list',
         href: 'http://www.google.com',
