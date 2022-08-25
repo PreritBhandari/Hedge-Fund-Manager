@@ -2,13 +2,15 @@ import React from 'react';
 import {
     Button,
     ButtonGroup,
-    ButtonStateful,
     Dropdown,
     IconSettings,
     Icon,
     PageHeader,
     PageHeaderControl
 } from "@salesforce/design-system-react";
+
+import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
+
 
 class Account extends React.Component {
     static displayName = 'RecordHomePageHeaderExample';
@@ -21,21 +23,23 @@ class Account extends React.Component {
                         <Button label="Add Tag" />
                         <Button label="Edit" />
                         <Button label="Delete" />
-                        <Dropdown
-                            align="right"
-                            assistiveText={{ icon: 'More Options' }}
-                            iconCategory="utility"
-                            iconName="down"
-                            iconVariant="border-filled"
-                            id="dropdown-record-home-example"
-                            options={[
-                                { label: 'Menu Item One', value: 'A0' },
-                                { label: 'Menu Item Two', value: 'B0' },
-                                { label: 'Menu Item Three', value: 'C0' },
-                                { type: 'divider' },
-                                { label: 'Menu Item Four', value: 'D0' },
-                            ]}
-                        />
+                        <IconSettings utilitySprite={standardSprite}>
+                            <Dropdown
+                                align="right"
+                                assistiveText={{ icon: 'More Options' }}
+                                iconCategory="utility"
+                                iconName="down"
+                                iconVariant="border-filled"
+                                id="dropdown-record-home-example"
+                                options={[
+                                    { label: 'Menu Item One', value: 'A0' },
+                                    { label: 'Menu Item Two', value: 'B0' },
+                                    { label: 'Menu Item Three', value: 'C0' },
+                                    { type: 'divider' },
+                                    { label: 'Menu Item Four', value: 'D0' },
+                                ]}
+                            />
+                        </IconSettings>
                     </ButtonGroup>
                 </PageHeaderControl>
             </React.Fragment>
@@ -78,22 +82,21 @@ class Account extends React.Component {
         ];
 
         return (
-            <IconSettings iconPath="/assets/icons">
-                <PageHeader
-                    details={details}
-                    icon={
-                        <Icon
-                            assistiveText={{ label: 'User' }}
-                            category="standard"
-                            name="opportunity"
-                        />
-                    }
-                    label="Accounts"
-                    onRenderActions={actions}
-                    title="Trading Wallet"
-                    variant="record-home"
-                />
-            </IconSettings>
+            <PageHeader
+                details={details}
+                icon={
+                    <Icon
+                        assistiveText={{ label: 'User' }}
+                        category="standard"
+                        name="opportunity"
+                    />
+
+                }
+                label="Accounts"
+                onRenderActions={actions}
+                title="Trading Wallet"
+                variant="record-home"
+            />
         );
     }
 }

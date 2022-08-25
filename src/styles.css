@@ -13,6 +13,73 @@
   -webkit-box-shadow: none !important;
 }
 
-.slds-page-header{
-    margin: 15px 10px 10px 10px;
+.slds-page-header {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.homepage {
+  padding: 10px;
+}
+
+#tab-default {
+  background-color: transparent;
+  padding: 5px;
+}
+
+.slds-show {
+  background-color: transparent !important;
+}
+
+.slds-tabs_default__nav {
+  border: none !important;
+  background-color: #fff !important;
+  padding-top: 15px;
+}
+
+.slds-tabs_default__content {
+  margin-top: 20px;
+}
+
+.slds-section {
+  margin: 0 !important;
+}
+
+.slds-section__title-action {
+  background: none !important;
+  padding: 0 !important;
+}
+
+.slds-table_header-hidden {
+  background-color: white;
+  z-index: 10 !important;
+  position: relative;
+}
+
+.slds-table_header-hidden td div {
+  font-weight: bold !important;
+}
+
+.slds-table_header-fixed_scroller {
+  overflow: auto !important;
+}
+
+.slds-table_header-fixed_scroller {
+  background-color: white !important;
+}
+
+.slds-has-focus {
+  box-shadow: none !important;
+}
+
+.slds-button:active {
+  border: none !important;
+}
+
+.slds-table tbody td {
+  vertical-align: top !important;
+}
+
+.slds-table tbody th {
+  padding-top: 0 !important;
 }
