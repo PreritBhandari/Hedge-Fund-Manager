@@ -3,9 +3,6 @@ import React, { useState } from 'react';
 import { Button, DataTable, DataTableColumn, ExpandableSection, IconSettings } from '@salesforce/design-system-react';
 import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
 
-import log from '@salesforce/design-system-react/utilities/log';
-import List from '@salesforce/design-system-react/lib/components/panel/filtering/list';
-
 const protocolData = require("../../dummyDatas/index.json")
 
 const columns = [

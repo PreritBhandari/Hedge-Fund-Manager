@@ -88,7 +88,36 @@
   display: none !important;
 }
 
-.barLabel{
+.barLabel {
   text-align: center;
 }
 
+.titleLabel {
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0px 20px 20px !important;
+}
+
+.slds-grid a {
+  color: inherit !important;
+  margin-top: 3px;
+}
+.slds-grid li {
+  padding: 5px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.row1_overview {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.row2_overview {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

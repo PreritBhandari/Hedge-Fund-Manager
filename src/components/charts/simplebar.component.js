@@ -46,24 +46,22 @@ const data = [
     },
 ];
 
-export default class SimpleBarChart extends PureComponent {
 
-    render() {
-        return (
-            <div style={{ width: '100%', background: "white" }}>
-                <ResponsiveContainer width={"100%"} height={300}>
-                    <BarChart width={150} height={40} data={data}>
-                        <CartesianGrid strokeDasharray="3 0" />
-                        <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <Bar dataKey="uv" fill="#1b96ff" />
-                    </BarChart>
-                </ResponsiveContainer>
-                <p className='barLabel'>Bar Chart By Prerit </p>
+export default function SimpleBarChart() {
+    return (
+        <div style={{ width: '100%', background: "white" }}>
+            <ResponsiveContainer width={"100%"} height={300}>
+                <BarChart width={150} height={40} data={data}>
+                    <CartesianGrid strokeDasharray="3 0" />
+                    <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
+                    <XAxis dataKey="name" />
+                    <YAxis />
+                    <Bar dataKey="uv" fill="#1b96ff" />
+                </BarChart>
+            </ResponsiveContainer>
+            <p className='barLabel'>Bar Chart By Prerit </p>
 
-            </div>
+        </div>
 
-        );
-    }
+    );
 }

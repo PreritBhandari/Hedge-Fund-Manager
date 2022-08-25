@@ -8,10 +8,16 @@ import {
     GlobalNavigationBarDropdown,
     GlobalNavigationBarLink,
     Button,
-    Icon
+    Icon,
+    IconSettings
 } from "@salesforce/design-system-react";
+import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function CustomNav() {
+
+    const location = useLocation()
+    const path = location.pathname
     return (
         <GlobalNavigationBar>
             <GlobalNavigationBarRegion region="primary">
@@ -53,24 +59,42 @@ export default function CustomNav() {
                 </AppLauncher>
             </GlobalNavigationBarRegion>
             <GlobalNavigationBarRegion region="secondary" navigation>
-                <GlobalNavigationBarLink active label="Home" id="home-link" />
-                <GlobalNavigationBarDropdown
-                    assistiveText={{ icon: 'Open menu item submenu' }}
-                    id="primaryDropdown"
-                    label="Defi"
-                    options={dropdownCollection}
-                />
-                <GlobalNavigationBarDropdown
-                    assistiveText={{ icon: 'Open menu item submenu' }}
-                    id="primaryDropdown"
-                    label="Exchanges"
-                    options={dropdownCollection}
-                />
-                <GlobalNavigationBarLink label="Dashboards" />
-                <GlobalNavigationBarLink label="Assets" />
-                <GlobalNavigationBarLink label="Reports" />
-                <GlobalNavigationBarLink label="Snapshots" />
-                <GlobalNavigationBarLink label="Clients" />
+                <IconSettings utilitySprite={standardSprite}>
+                        {path === "/" ?
+                            <GlobalNavigationBarLink active label="Home" id="home-link" />
+                            :
+                            <GlobalNavigationBarLink label="Home" id="home-link" />
+                        }
+                    <GlobalNavigationBarDropdown
+                        id="primaryDropdown"
+                        label="Defi"
+                        options={dropdownCollection}
+                    />
+                    <Link to={"/exchange"}>
+                        {path === "/exchange" ?
+
+                            <GlobalNavigationBarDropdown
+                                id="primaryDropdown"
+                                label="Exchanges"
+                                active
+                                options={dropdownCollection}
+                            />
+                            :
+                            <GlobalNavigationBarDropdown
+                                id="primaryDropdown"
+                                label="Exchanges"
+                                options={dropdownCollection}
+                            />
+                        }
+
+                    </Link>
+                    <GlobalNavigationBarLink label="Dashboards" />
+                    <GlobalNavigationBarLink label="Assets" />
+                    <GlobalNavigationBarLink label="Reports" />
+                    <GlobalNavigationBarLink label="Snapshots" />
+                    <GlobalNavigationBarLink label="Clients" />
+                </IconSettings>
+
             </GlobalNavigationBarRegion>
         </GlobalNavigationBar>
     )
@@ -82,7 +106,7 @@ const dropdownCollection = [
         value: '1',
         iconCategory: 'utility',
         iconName: 'table',
-        href: 'http://www.google.com',
+        href: '/exchange',
     },
     {
         label: 'Transactions',
