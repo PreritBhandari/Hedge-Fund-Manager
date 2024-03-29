@@ -13,7 +13,7 @@ import {
 } from "@salesforce/design-system-react";
 import standardSprite from '@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg';
 import { Link, useLocation } from 'react-router-dom';
-import overviewIcon from '../../assets/images/overview.svg'
+// import overviewIcon from '../../assets/images/overview.svg'
 
 export default function CustomNav() {
 
